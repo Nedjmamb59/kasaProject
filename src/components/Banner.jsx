@@ -2,7 +2,7 @@ import propTypes from 'prop-types'
 
 function Banner({ about }) {
 
-  // Create different classNames for house and about pages banners
+  // Create different classNames for house and about pages banners.
   const classes = about ?
     ["banner banner__about", "white banner__about__h1"]
     : ["banner banner__home", "white banner__home__h1"]
@@ -14,7 +14,7 @@ function Banner({ about }) {
   )
 }
 
-// Specify props types
+// Specify props types//
 Banner.propTypes = {
   about: propTypes.bool.isRequired
 }
