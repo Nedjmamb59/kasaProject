@@ -7,52 +7,69 @@
   @include large-border;
   margin: 15px auto;
   position: relative;
+
   &__arrows {
-    display: contents;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
   }
+
   &__number {
     position: absolute;
     bottom: 25px;
     left: 49%;
     display: none;
   }
+
   &__img {
     @include large-border;
     @include dimensions();
     object-fit: cover;
   }
+
   &__arrow {
-    position: absolute;
-    bottom: calc(($carousel-height-sm - $carousel-arrow-height-sm) / 2);
+    cursor: pointer;
     max-height: $carousel-arrow-height-sm;
     max-width: $carousel-arrow-width-sm;
-    cursor: pointer;
+    transition: transform 0.2s ease; /* Ajout de la transition */
+
     &:hover,
     &:focus {
       transform: scale(1.1);
+      transform-origin: center; /* Ajout de l'origine de transformation */
     }
+
     &--left {
-      left: 7.5px;
+      margin-left: 10px;
     }
+
     &--right {
-      right: 7.5px;
+      margin-right: 10px;
     }
   }
+
   @include desktop-breakpoint {
     margin: 40px auto;
     @include dimensions($h: $carousel-height);
+
     &__number {
       display: initial;
     }
+
     &__arrow {
-      bottom: calc(($carousel-height - $carousel-arrow-height) / 2);
       max-height: $carousel-arrow-height;
       max-width: $carousel-arrow-width;
+
       &--left {
-        left: 20px;
+        margin-left: 20px;
       }
+
       &--right {
-        right: 20px;
+        margin-right: 20px;
       }
     }
   }
