@@ -32,7 +32,9 @@ function Carousel() {
             className='carousel__arrow carousel__arrow--right' onClick={() => (scroll('right'))} />
         </div>
       )}
-      <p className="carousel__number white"> {index}/{numPictures}</p>
+      {numPictures > 1 && (
+        <p className="carousel__number white"> {index}/{numPictures}</p>
+      )}
       <img className="carousel__img" src={pictures[index - 1]} alt="une des photos du logement" />
     </div>
   )
@@ -41,6 +43,5 @@ function Carousel() {
 Carousel.propTypes = {
   pictures: propTypes.arrayOf(propTypes.string)
 }
-
 
 export default Carousel

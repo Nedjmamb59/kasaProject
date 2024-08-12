@@ -16,7 +16,7 @@ Card.propTypes = {
 }
 
 Card.defaultProps = {
-  title: 'Tritre de la location'
+  title: 'Titre de la location'
 }
 
 export default Card

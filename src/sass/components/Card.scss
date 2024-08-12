@@ -10,7 +10,7 @@
   cursor: pointer;
   &:hover,
   &:focus {
-    box-shadow: none;  // Enlever l'ombre rouge
+    box-shadow: none;  
     transform: scale(1.01);
   }
   &__title {
